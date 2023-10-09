@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Reactproject/static/css/main.e3602fee.css",
+    "main.js": "/Reactproject/static/js/main.63921b75.js",
+    "static/media/investment-calculator-logo.png": "/Reactproject/static/media/investment-calculator-logo.c20da4d5b23f8d49ad00.png",
+    "index.html": "/Reactproject/index.html",
+    "main.e3602fee.css.map": "/Reactproject/static/css/main.e3602fee.css.map",
+    "main.63921b75.js.map": "/Reactproject/static/js/main.63921b75.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3602fee.css",
+    "static/js/main.63921b75.js"
+  ]
+}
