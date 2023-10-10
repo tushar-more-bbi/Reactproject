@@ -9,12 +9,16 @@ function App() {
 
   var yearlyData=[];
 
+  
+
   const [yearlyDataResult,setyearlyDataResult] = React.useState([]);
- 
+  const [resultFlag,setResultFlag] = React.useState(true);
+
   const calculateHandler = (userInput) => {
     // Should be triggered when form is submitted
     // You might not directly want to bind it to the submit event on the form though...
     console.log(userInput);
+   
        
     let currentSavings = +userInput['currentsavings']; // feel free to change the shape of this input object!
     const yearlyContribution = +userInput['yearlysavings']; // as mentioned: feel free to change the shape...
@@ -36,9 +40,21 @@ function App() {
     }
     
     setyearlyDataResult(yearlyData);
+    setResultFlag(true);
 
     // do something with yearlyData ...
   };
+
+ 
+  const resetFlagHandler = (value) => {
+    setResultFlag(value);
+  }
+
+
+
+
+
+
 
 
   return (
@@ -49,8 +65,8 @@ function App() {
       </header> */}
 
       <Header src={logo}></Header>
-      <Form onsubmitForm={calculateHandler}></Form>
-      <Result getresult={yearlyDataResult}></Result>
+      <Form onsubmitForm={calculateHandler} reset={resetFlagHandler}></Form>
+      <Result getresult={yearlyDataResult} clearResult={resultFlag}></Result>
   
 
       {/* <form className="form">
